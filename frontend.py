@@ -42,7 +42,7 @@ st.set_page_config(page_title="Prompt Injection Detector", layout="wide")
 st.title("🛡️ Prompt Injection Attack Detector")
 
 # Tabs
-tab1, tab2, tab3 = st.tabs(["Prompt Classification", "Dataset Overview", "About Us"])
+tab1, tab2 = st.tabs(["Prompt Classification", "Dataset Overview"])
 
 # ──────────────── TAB 1 ────────────────
 with tab1:
@@ -94,14 +94,3 @@ with tab2:
         st.bar_chart(df["Category"].value_counts())
     except Exception as e:
         st.error(f"Failed to load dataset: {str(e)}")
-
-# ──────────────── TAB 3 ────────────────
-with tab3:
-    st.header("👩‍💻 About")
-    st.write("""
-    This project detects **Prompt Injection Attacks** using LSTM and Explainable AI (XAI).
-    
-    **Developed by**:  
-    Akshara Balan, Alan C M, Maria Baiju, Tom Davis  
-    **Guided by**: Dr. Amrutha Muralidharan Nair
-    """)
